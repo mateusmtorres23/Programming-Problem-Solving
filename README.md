@@ -1,2 +1,2 @@
 # beecrowd
-as listas do beecrowd e futuramente alguns exercicios diversos
+as listas da faculade e futuramente alguns exercicios diversos
