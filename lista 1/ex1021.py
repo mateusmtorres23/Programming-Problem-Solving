@@ -1,15 +1,11 @@
-money = int(round(float(input()) * 100))
-
-bills = [(10000, 'R$ 100.00'), (5000, 'R$ 50.00'), (2000, 'R$ 20.00'), (1000, 'R$ 10.00'), (500, 'R$ 5.00'), (200, 'R$ 2.00')]
-coins = [(100, 'R$ 1.00'), (50, 'R$ 0.50'), (25, 'R$ 0.25'), (10, 'R$ 0.10'), (5, 'R$ 0.05'), (1, 'R$ 0.01')]
-
+num = int(round(float(input())*100))
+notes = [(10000,'100'),(5000,'50'),(2000,'20'),(1000,'10'),(500,'5'),(200,'2')]
+coins = [(100,'1.00'),(50,'0.50'),(25,'0.25'),(10,'0.10'),(5,'0.05'),(1,'0.01')]
 print('NOTAS:')
-for value, label in bills:
-    num = money // value
-    money -= value * num
-    print(f'{num} nota(s) de {label}')
+for div, note in notes:
+    print(f'{num//div} nota(s) de R$ {note}.00')
+    num -= (num//div)*div
 print('MOEDAS:')
-for value, label in coins:
-    num = money // value
-    money -= value * num
-    print(f'{num} moeda(s) de {label}')
+for div, coin in coins:
+    print(f'{num//div} moeda(s) de R$ {coin}')
+    num -= (num//div)*div
