@@ -1,21 +1,20 @@
 while True:
     try:
         c, tests = [int(x) for x in input().split()]
+        l1 = input().lower()
+        l2 = input().lower()
         dic = {}
-        key1 =  input().lower()
-        key2 = input().lower()
-        for ltr in range(len(key1)):
-                dic[key2[ltr]] = key1[ltr]
-                dic[key1[ltr]] = key2[ltr]
+        for a, b in zip(l1, l2):
+            dic[a] = b
+            dic[b] = a
         for _ in range(tests):
             phrase = input()
             result = ''
-            for ltr in phrase:
-                ltr_low = ltr.lower()
-                letter = dic[ltr_low] if ltr_low in dic else ltr
-                letter = letter.upper() if ltr.isupper() else letter
-                result += letter   
+            for let in phrase:
+                letlow = let.lower()
+                sub = dic[letlow] if letlow in dic else let
+                sub = sub.upper() if let.isupper() else sub
+                result +=sub
             print(result)
         print()
-    except EOFError:
-        break
+    except EOFError: break
