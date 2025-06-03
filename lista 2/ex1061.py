@@ -1,17 +1,13 @@
-day = int(input().split()[1])
-hr,mn,sc = map(int, input().strip().split(' : '))
-day_f = int(input().split()[1])
-hf,mf,sf = map(int, input().strip().split(' : '))
+day = [int(x) for x in input().split() if x.isdigit()]
+hr,mt,sc = [int(x) for x in input().split() if x.isdigit()]
+dayf = [int(x) for x in input().split() if x.isdigit()]
+hf,mf,sf = [int(x) for x in input().split() if x.isdigit()]
 
-total = (day*86400) + (hr*3600) + (mn*60) +sc
-total_f = (day_f*86400) + (hf*3600) + (mf*60) + sf
-event = total_f - total
-
-time = [0,0,0,0]
-denominators = [86400,3600,60,1]
-for i in range(len(time)):
-    time[i] = event//denominators[i]
-    event %= denominators[i]
-strings = ['dia(s)','hora(s)','minuto(s)','segundo(s)']
-for j in range(len(time)):
-    print(f'{time[j]} {strings[j]}')
+start = (day[0]*86400)+(hr*3600)+(mt*60)+sc
+end = (dayf[0]*86400)+(hf*3600)+(mf*60)+sf
+event = end-start
+time = [(86400,'dia(s)'),(3600,'hora(s)'),(60,'minuto(s)'),(1,'segundo(s)')]
+for d, s in time:
+    t = event//d
+    event %= d
+    print(f'{t} {s}')
