@@ -1,4 +1,4 @@
-package exercicios;
+package Logic_Exercises;
 import java.util.Scanner;
 public class Ex1002 {
     public static void main(String[] args) {
