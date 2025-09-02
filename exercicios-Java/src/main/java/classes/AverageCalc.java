@@ -1,12 +1,12 @@
-package exercicios;
+package classes;
 
 import java.util.Scanner;
-public class CalculadoraMedia {
+public class AverageCalc {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double nota1 = sc.nextInt();
-        double nota2 = sc.nextInt();
-        double media = (nota1+nota2)/2;
+        double grade1 = sc.nextInt();
+        double grade2 = sc.nextInt();
+        double media = (grade2+grade1)/2;
         if(media<7.0){
             System.out.println("reprovado");
         } else{

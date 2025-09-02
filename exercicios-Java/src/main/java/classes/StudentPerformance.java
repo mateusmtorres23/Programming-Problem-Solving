@@ -1,7 +1,7 @@
-package exercicios;
+package classes;
 
 import java.util.Scanner;
-public class DesempenhoAluno {
+public class StudentPerformance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nome = sc.nextLine();
