@@ -1,4 +1,4 @@
-package classes;
+package Class1_P2;
 
 public class Register {
     public static void main(String[] args) {

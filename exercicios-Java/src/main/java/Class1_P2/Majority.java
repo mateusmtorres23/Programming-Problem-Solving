@@ -1,4 +1,4 @@
-package classes;
+package Class1_P2;
 
 import java.util.Scanner;
 
