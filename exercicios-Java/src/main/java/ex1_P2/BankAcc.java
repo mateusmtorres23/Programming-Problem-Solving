@@ -1,9 +1,11 @@
 package ex1_P2;
 import java.util.Scanner;
+
 public class BankAcc {
     String name;
     int Acc;
     double balance = 1000.00;
+
     Scanner sc = new Scanner(System.in);
 
     public void showBalance(){
@@ -52,5 +54,4 @@ public class BankAcc {
         acc1.withdraw();
         acc1.showBalance();
     }
-
 }
